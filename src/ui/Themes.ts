@@ -8,7 +8,7 @@ export const Light = createMuiTheme({
     },
     primary: {
       main: "#1e1e1e"
-    }
+    },
   },
 });
 
