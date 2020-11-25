@@ -1,11 +1,30 @@
-import Author from "@/components/Author/Author";
+import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
 
-export default function Index() {
+import Author from '@/components/Author/Author';
+import { getPost } from '@/resource/github';
+import matter from 'gray-matter';
+
+export default function Index({
+  post,
+}: InferGetServerSidePropsType<typeof getServerSideProps>) {
   return (
     <>
       <Author />
-      <h1>Ну типо первый пост</h1>
-      <p>Я люблю свою девочку! (Алену)</p>
+      <h1>{post.data.title}</h1>
+      <pre>{post.content}</pre>
     </>
   );
 }
+
+export const getServerSideProps: GetServerSideProps = async context => {
+  const post = await getPost('first-post.md');
+  const { content, data } = matter(post);
+  return {
+    props: {
+      post: {
+        content,
+        data,
+      },
+    },
+  };
+};
