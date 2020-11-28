@@ -1,5 +1,6 @@
 import { makeStyles, Typography, useTheme } from '@material-ui/core';
-import React, { FC } from 'react';
+import { FC } from 'react';
+import ThemeSwitcher from '@/components/simple/ThemeSwitcher.tsx';
 
 const useStyles = makeStyles({
   title: (props: any) => ({
@@ -8,21 +9,29 @@ const useStyles = makeStyles({
     color: 'black',
     textTransform: 'uppercase',
   }),
-  wrapper: {
+
+  logo: {
     width: 'fit-content',
     background: '#efd81d',
     padding: '25px 5px 5px 35px',
-  }
+  },
+
+  wrapper: {
+    display: 'flex',
+    justifyContent: 'space-between',
+  },
 });
 
 const Header: FC = () => {
   const classes = useStyles(useTheme().palette);
-
   return (
     <div className={classes.wrapper}>
-      <Typography variant="h4" component="h1" className={classes.title}>
-        javascriptor
-      </Typography>
+      <div className={classes.logo}>
+        <Typography variant="h4" component="h1" className={classes.title}>
+          javascriptor
+        </Typography>
+      </div>
+      <ThemeSwitcher />
     </div>
   );
 };

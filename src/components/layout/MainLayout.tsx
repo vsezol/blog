@@ -1,7 +1,7 @@
 import React, { FC, ReactNode } from 'react';
 import { Container, makeStyles, useTheme } from '@material-ui/core';
 
-import Header from '@/components/Header/Header';
+import Header from '@/components/simple/Header/Header';
 
 export interface IProps {
   children: ReactNode;

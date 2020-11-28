@@ -1,12 +1,13 @@
 import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
 
-import Author from '@/components/Author/Author';
+import Author from '@/components/simple/Author/Author';
 import { getPost } from '@/resource/github';
 import matter from 'gray-matter';
 
 export default function Index({
   post,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
+
   return (
     <>
       <Author />

@@ -4,10 +4,10 @@ export const Light = createMuiTheme({
   palette: {
     type: 'light',
     secondary: {
-      main: '#ffffff'
+      main: '#EDEEF0',
     },
     primary: {
-      main: "#1e1e1e"
+      main: '#0093A0',
     },
   },
 });
@@ -16,7 +16,10 @@ export const Dark = createMuiTheme({
   palette: {
     type: 'dark',
     secondary: {
-      main: '#1e1e1e'
+      main: '#293338',
+    },
+    primary: {
+      main: '#0093A0',
     },
   },
 });

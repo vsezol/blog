@@ -2,11 +2,13 @@ import { Avatar, makeStyles, useTheme, Typography, Link } from '@material-ui/cor
 
 const useStyles = makeStyles({
   large: (props: any) => ({
-    width: props.spacing(7),
-    height: props.spacing(7),
+    width: props.spacing(8),
+    height: props.spacing(8),
   }),
   wrapper: {
     display: 'flex',
+    alignItems: 'center',
+    marginBottom: '40px',
   },
   description: {
     marginLeft: '10px',
@@ -23,10 +25,10 @@ const Author = () => {
         className={classes.large}
       />
       <div className={classes.description}>
-        <Typography variant="subtitle1" component="h2">
+        <Typography variant="h6" component="h2">
           Personal blog by <Link href="https://vk.com/vsezol" variant="subtitle1">Vsevolod Zolotov</Link>.
         </Typography>
-        <Typography variant="subtitle1">
+        <Typography variant="h6">
           Life developer.
         </Typography>
       </div>
