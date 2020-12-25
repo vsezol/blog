@@ -1,7 +1,7 @@
 import React, { FC, ReactNode } from 'react';
 import { Container, makeStyles, useTheme } from '@material-ui/core';
 
-import Header from '@/components/simple/Header/Header';
+import Header from '@/components/simple/Header';
 
 export interface IProps {
   children: ReactNode;
@@ -22,14 +22,14 @@ const MainLayout: FC<IProps> = ({ children }) => {
   const classes = useStyles(useTheme().palette);
 
   return (
-    <Container maxWidth={false} className={classes.wrapper}>
+    <div className={classes.wrapper}>
       <Container maxWidth="md">
         <Header />
         <main className={classes.main}>
           {children}
         </main>
       </Container>
-    </Container>
+    </div>
   );
 };
 

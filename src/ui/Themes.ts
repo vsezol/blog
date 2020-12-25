@@ -9,6 +9,9 @@ export const Light = createMuiTheme({
     primary: {
       main: '#0093A0',
     },
+    info: {
+      main: '#efd81d',
+    },
   },
 });
 
@@ -20,6 +23,9 @@ export const Dark = createMuiTheme({
     },
     primary: {
       main: '#0093A0',
+    },
+    info: {
+      main: '#efd81d',
     },
   },
 });
