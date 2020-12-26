@@ -23,7 +23,7 @@ const MainLayout: FC<IProps> = ({ children }) => {
 
   return (
     <div className={classes.wrapper}>
-      <Container maxWidth="md">
+      <Container maxWidth="sm">
         <Header />
         <main className={classes.main}>
           {children}

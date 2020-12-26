@@ -8,6 +8,7 @@ import {
   IconButton,
   makeStyles,
   useTheme,
+  Button,
 } from '@material-ui/core';
 
 import clsx from 'clsx';
@@ -31,13 +32,17 @@ const useStyles = makeStyles(theme => ({
   textField: {
     width: '300px',
   },
+  button: {
+    width: '300px',
+    height: 56,
+  },
 }));
 
 export default function Login() {
   const classes = useStyles(useTheme());
 
   const [values, setValues] = useState({
-    login: '',
+    email: '',
     password: '',
     showPassword: false,
   });
@@ -63,13 +68,13 @@ export default function Login() {
           className={clsx(classes.margin, classes.textField)}
           variant="outlined"
         >
-          <InputLabel htmlFor="login">Login</InputLabel>
+          <InputLabel htmlFor="email">E-mail</InputLabel>
           <OutlinedInput
-            id="login"
+            id="email"
             type="text"
-            value={values.login}
-            onChange={handleChange('login')}
-            labelWidth={40}
+            value={values.email}
+            onChange={handleChange('email')}
+            labelWidth={45}
           />
         </FormControl>
       </div>
@@ -98,6 +103,16 @@ export default function Login() {
             labelWidth={70}
           />
         </FormControl>
+      </div>
+      <div>
+        <Button
+          size="large"
+          variant="outlined"
+          color="primary"
+          className={clsx(classes.margin, classes.button)}
+        >
+          Login
+        </Button>
       </div>
     </div>
   );

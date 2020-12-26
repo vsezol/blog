@@ -1,9 +1,15 @@
-import { Avatar, makeStyles, useTheme, Typography, Link } from '@material-ui/core';
+import {
+  Avatar,
+  makeStyles,
+  useTheme,
+  Typography,
+  Link,
+} from '@material-ui/core';
 
 const useStyles = makeStyles({
   large: (props: any) => ({
-    width: props.spacing(8),
-    height: props.spacing(8),
+    width: props.spacing(7),
+    height: props.spacing(7),
   }),
   wrapper: {
     display: 'flex',
@@ -12,8 +18,8 @@ const useStyles = makeStyles({
   },
   description: {
     marginLeft: '10px',
-  }
-})
+  },
+});
 
 const Author = () => {
   const classes = useStyles(useTheme());
@@ -25,10 +31,13 @@ const Author = () => {
         className={classes.large}
       />
       <div className={classes.description}>
-        <Typography variant="h6" component="h2">
-          Personal blog by <Link href="https://vk.com/vsezol" variant="subtitle1">Vsevolod Zolotov</Link>.
+        <Typography variant="subtitle1" component="h2">
+          Personal blog by&nbsp;
+          <Link href="https://vk.com/vsezol" variant="subtitle1">
+            Vsevolod&nbsp;Zolotov
+          </Link>
         </Typography>
-        <Typography variant="h6">
+        <Typography variant="subtitle1" component="h2">
           Life developer.
         </Typography>
       </div>
